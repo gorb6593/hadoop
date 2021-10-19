@@ -1,0 +1,42 @@
+@controller => dispatcherservlet이 인식하는 객체로 만들어준다.
+
+
+@requestmapping => handlermapping설정을 대체한다.
+=>ex)
+@RequestMapping("/insertBoard.do")
+클라이언트로부터 /insertBoard.do 라는 요청이 왔을 때, insertBoard를 매핑하겠다.
+
+
+대부분  Controller는 사용자의 입력 정보를 추출하여 VO(value object)객체에 저장
+비지니스 컴포넌트의 메소드를 호출할 때 VO객체를 인자로 전달한다.
+
+
+ex)boardlist.jsp에 <input type="text" name="title"/> 이면 title을 따라서 BoardVO클래스로 이동
+BoardVO에서 public void setTitle(String title){
+	this.title = title;
+	}
+로 전달된다.
+
+1. 톰캣 서버를 구동하면 web.xml파일을 로딩해 서블릿 컨테이너가 구동된다.
+2. 서블릿 컨테이너는 web.xml에 등록된 ContextLoaderListener객체를 생성한다.
+이때  ContextLoaderListener객체는 src/main/resoureces 폴더에 있는 applicationContext.xml파일을 로딩
+이를 Root컨테이너라 한다.
+3 이때, Service구현 클래스, DAO객체들이 메모리에 생성된다
+
+web.xml에 
+<servlet>
+	<servlet-name>hello</servlet-name>
+	<servlet-class>hello.GelloServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>hello</servlet-name>
+	<url-pattern>/hello.do</url-pattern>
+</servlet-mapping>
+라고 설정하면 /hello.do라는 url 요청을 전송하면, hello라는 이름으로 등록된 hello.HelloServlet클래스를 찾아
+실행시킨다.
+
+1. web.xml 실행
+2. 브라우저로부터 /hello.do 요청 수신
+3. hello.HelloServlet클래스를 찾아서 객체 생성하고 doGet()메소드 호출
+4. deGet()메소드를 클라이언트 브라우저에 전송
+
