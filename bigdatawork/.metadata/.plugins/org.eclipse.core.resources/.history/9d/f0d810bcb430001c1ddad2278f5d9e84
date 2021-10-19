@@ -1,0 +1,28 @@
+package hdfs.exam;
+
+import java.io.IOException;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FSDataInputStream;
+import org.apache.hadoop.fs.FSDataOutputStream;
+import org.apache.hadoop.fs.FileSystem;
+import org.apache.hadoop.fs.Path;
+
+public class HDFSCopyTest {
+	public static void main(String[] args) {
+		Configuration conf = new Configuration();
+		FileSystem hdfs = null;
+		FSDataInputStream hdfsIn = null;
+		FSDataOutputStream hdfsOut = null;
+		try {
+			hdfs = FileSystem.get(conf);
+			Path Path = new Path(args[0]);
+			hdfsOut = hdfs.create(Path);
+			hdfsIn = hdfs.open(Path);
+			hdfsOut.writeUTF(args[1]);
+			int data = hdfsIn.read();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

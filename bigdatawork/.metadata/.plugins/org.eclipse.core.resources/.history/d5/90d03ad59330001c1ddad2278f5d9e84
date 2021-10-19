@@ -1,0 +1,44 @@
+package io;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class test01 {
+	public static void main(String[] args) {
+		File file = new File("src/io/FileTest01.java");
+		System.out.println(file);
+		
+		FileReader fis = null;
+		//1. 파일오픈
+		try {
+			fis = new FileReader("src/io/FileTest01.java");
+		//2. 파일액세스
+			while(true) {
+				int data = fis.read();
+				if(data==-1) { //파일의 끝을 만나면 -1을 리턴한다
+					break;
+				}
+				System.out.print((char)data);
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}finally {
+			//3. 파일닫기
+			try {
+				if(fis!=null) fis.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	FileWriter fw = new FileWriter("src/data/copy_result.txt", true);
+	//2. 파일액세스	
+	fw.write("문자열쓰기\n");  // \n 한 줄 밑으로 떨어뜨리기(Enter느낌)	
+	//3. 파일닫기
+	fw.close();
+}

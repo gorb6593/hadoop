@@ -1,0 +1,37 @@
+package io;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class ScoreTest {
+	public static void main(String[] args) {
+		FileReader fis = null;
+		BufferedReader br = null;
+				try {
+					//fis = new FileReader("src/data/score.txt");	
+					//fw = new FileWriter("src/data/score1.txt");
+					br = new BufferedReader(new FileReader("src/data/score.txt"));
+					while(true) {
+						String line = br.readLine();
+						if(line==null) { //파일의 끝을 만나면 -1을 리턴한다
+							break;
+						}						
+						System.out.println(line);											
+					}					
+				} catch (FileNotFoundException e) {
+					e.printStackTrace();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}finally {					
+					try {
+						if(fis!=null) fis.close();						
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+				
+	}
+}

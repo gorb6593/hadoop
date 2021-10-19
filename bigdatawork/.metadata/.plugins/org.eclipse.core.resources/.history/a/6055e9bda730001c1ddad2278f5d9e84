@@ -1,0 +1,7 @@
+package hdfs.exam;
+//
+public class HDFSTest01 {
+	public static void main(String[] args) {
+		
+	}
+}

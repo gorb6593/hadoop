@@ -1,0 +1,10 @@
+package io;
+
+public class FileTest01 {
+	public static void main(String[] args) {
+		//엑세스하고 싶은 파일이나 폴더의 위치를 file객체를 만들 때 매개변수로 정의
+		//c:/bigdata_iot or c:\\iot
+		File file1 = new File("c:\\bigdata_iot");
+	}
+
+}
