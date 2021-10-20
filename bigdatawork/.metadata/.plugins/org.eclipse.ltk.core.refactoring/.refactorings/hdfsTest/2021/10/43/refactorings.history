@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;build.xml&apos; to &apos;mapreduceTest&apos;&#x0D;&#x0A;- Original project: &apos;hdfsTest&apos;&#x0D;&#x0A;- Destination element: &apos;mapreduceTest&apos;&#x0D;&#x0A;- Original element: &apos;build.xml&apos;" description="Copy file" destination="=mapreduceTest" element1="build.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1634692678614" units="0" version="1.0"/>
+</session>

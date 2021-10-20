@@ -1,0 +1,10 @@
+package mapred.exam.air;
+
+public class AirDriver {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

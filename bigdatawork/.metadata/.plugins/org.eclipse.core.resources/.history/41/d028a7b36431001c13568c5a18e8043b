@@ -1,0 +1,7 @@
+package mapred.basic;
+
+public class StockTest {
+	public static void main(String[] args) {
+		
+	}
+}

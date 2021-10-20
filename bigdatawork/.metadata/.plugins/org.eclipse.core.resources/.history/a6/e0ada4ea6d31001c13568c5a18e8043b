@@ -1,0 +1,30 @@
+package mapred.exam.stock;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.util.StringTokenizer;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+
+public class StockMapper extends Mapper<LongWritable, Text, Text, IntWritable>{
+	BufferedReader br = null;
+	Text outputKey = new Text();
+	static final IntWritable outputval = new IntWritable(1);
+	@Override
+	protected void map(LongWritable key, Text value, Mapper<LongWritable, Text, Text, IntWritable>.Context context)
+			throws IOException, InterruptedException {
+		StringTokenizer st = new StringTokenizer(value.toString());
+		while(st.hasMoreTokens()) {
+			String token = st.nextToken();
+			outputKey.set(token);
+			context.write(outputKey, outputval);
+		}
+		String line = br.readLine();
+		String[] data = line.split(",");
+	
+	}
+	
+}
