@@ -1,0 +1,39 @@
+package mapred.exam.air.option;
+
+import java.io.IOException;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+import org.apache.hadoop.util.GenericOptionsParser;
+import org.apache.hadoop.util.Tool;
+
+public class AirOptionDriver extends Configuration implements Tool{
+	public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
+		
+		//run메소드는 사용자가 입력한 모든 옵션에 대한 정보를 String[]으로 전달 받는다.
+		//-D와 함께 사용자가 입력한 옵션과 기존에 사용되던 명령행매개변수를 분리해서 관리해야 한다.
+		//이를 담당하는 객체가 GenericOptionParser
+		GenericOptionsParser optionParser = 
+				new GenericOptionsParser(getConf(), optionlist);
+		
+		Configuration conf = new Configuration();
+		Job job = new Job(conf, "Air");
+		
+		job.setMapperClass(AirOptionMapper.class);
+		job.setReducerClass(AirOptionReducer.class);
+		job.setJarByClass(AirOptionDriver.class);
+		
+		job.setOutputKeyClass(Text.class);
+		job.setOutputValueClass(IntWritable.class);
+		
+		FileInputFormat.addInputPath(job, new Path(args[0]));
+		FileOutputFormat.setOutputPath(job, new Path(args[1]));
+		
+		job.waitForCompletion(true);
+	}		
+}

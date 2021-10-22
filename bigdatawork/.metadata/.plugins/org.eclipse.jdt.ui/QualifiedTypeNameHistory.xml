@@ -26,11 +26,8 @@
     <fullyQualifiedTypeName name="mapred.basic.WordCountMapper"/>
     <fullyQualifiedTypeName name="mapred.basic.WordCountDriver"/>
     <fullyQualifiedTypeName name="mapred.basic.WorldCountReducer"/>
-    <fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.lib.input.TextInputFormat"/>
-    <fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.lib.output.TextOutputFormat"/>
     <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
     <fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.Reducer"/>
-    <fullyQualifiedTypeName name="org.apache.hadoop.conf.Configuration"/>
     <fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.Job"/>
     <fullyQualifiedTypeName name="mapred.basic.StockMapper"/>
     <fullyQualifiedTypeName name="mapred.basic.StockReducer"/>
@@ -42,7 +39,17 @@
     <fullyQualifiedTypeName name="java.lang.Double"/>
     <fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.Mapper"/>
     <fullyQualifiedTypeName name="org.apache.hadoop.io.LongWritable"/>
-    <fullyQualifiedTypeName name="org.apache.hadoop.io.Text"/>
-    <fullyQualifiedTypeName name="org.apache.hadoop.io.IntWritable"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="org.apache.hadoop.conf.Configuration"/>
+    <fullyQualifiedTypeName name="org.apache.hadoop.conf.Configured"/>
+    <fullyQualifiedTypeName name="org.apache.hadoop.util.Tool"/>
+    <fullyQualifiedTypeName name="org.apache.hadoop.util.GenericOptionsParser"/>
+    <fullyQualifiedTypeName name="org.apache.hadoop.util.ToolRunner"/>
+    <fullyQualifiedTypeName name="org.apache.hadoop.mapred.lib.MultipleOutputs"/>
+    <fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.lib.output.MultipleOutputs"/>
+    <fullyQualifiedTypeName name="org.apache.hadoop.io.IntWritable"/>
+    <fullyQualifiedTypeName name="org.apache.hadoop.mapred.TextOutputFormat"/>
+    <fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.lib.input.TextInputFormat"/>
+    <fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.lib.output.TextOutputFormat"/>
+    <fullyQualifiedTypeName name="org.apache.hadoop.io.Text"/>
 </qualifiedTypeNameHistroy>

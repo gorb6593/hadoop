@@ -8,7 +8,9 @@ import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 
 public class AirDriver {
 	public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
@@ -18,6 +20,9 @@ public class AirDriver {
 		job.setMapperClass(AirMapper.class);
 		job.setReducerClass(AirReducer.class);
 		job.setJarByClass(AirDriver.class);
+		
+		job.setInputFormatClass(TextInputFormat.class);
+		job.setOutputFormatClass(TextOutputFormat.class);
 		
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(IntWritable.class);
