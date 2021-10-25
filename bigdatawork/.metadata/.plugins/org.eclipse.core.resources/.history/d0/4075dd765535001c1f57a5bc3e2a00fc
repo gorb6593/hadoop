@@ -1,0 +1,20 @@
+package test;
+
+import java.io.IOException;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.mapreduce.Reducer;
+
+import mapreduce.air.sort.CustomKey;
+
+public class PageViewReducer
+	extends Reducer<MyKey, IntWritable, MyKey, IntWritable>{
+	IntWritable resulVal = new IntWritable();
+	MyKey resultKey = new MyKey();
+		
+	protected void reduce(CustomKey key, Iterable<IntWritable> values,
+			Reducer<MyKey, IntWritable, MyKey, IntWritable>.Context context)
+					throws IOException, InterruptedException {
+		int sum = 0;
+	
+}

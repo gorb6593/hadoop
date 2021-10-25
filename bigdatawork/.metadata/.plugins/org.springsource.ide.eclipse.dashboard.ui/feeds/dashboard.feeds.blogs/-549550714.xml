@@ -27,9 +27,17 @@
       <name>Scott Frederick</name>
     </author>
     <id>tag:spring.io,2021-10-21:4578</id>
-    <updated>2021-10-21T22:00:54Z</updated>
+    <updated>2021-10-21T22:00:00Z</updated>
     <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Boot &lt;code&gt;2.6.0-RC1&lt;/code&gt; has been released and is now available from &lt;a href="https://repo.spring.io/milestone"&gt;https://repo.spring.io/milestone&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This release includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v2.6.0-RC1"&gt;85 bug fixes, documentation improvements, and dependency upgrades&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
+&lt;p&gt;This release includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v2.6.0-RC1"&gt;85 bug fixes, documentation improvements, and dependency upgrades&lt;/a&gt;. New and Noteworthy features in this release include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Java runtime information is optionally available in the &lt;code&gt;/actuator/info&lt;/code&gt; endpoint&lt;/li&gt;
+  &lt;li&gt;Support has been added for Log4j2 composite configurations&lt;/li&gt;
+  &lt;li&gt;Additional configuration options have been added for buildpacks&lt;/li&gt;
+  &lt;li&gt;SameSite cookie attributes are now supported with the servlet stack&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For a complete list of the updates along with upgrading instructions, please take a look at &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.6.0-RC1-Release-Notes"&gt;the release notes&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Thanks to all those who have contributed with issue reports and pull requests. Spring Boot 2.6.0 is due to be released Nov 18, 2021.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
 &lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="https://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="https://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-boot/docs/2.6.0-RC1/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>

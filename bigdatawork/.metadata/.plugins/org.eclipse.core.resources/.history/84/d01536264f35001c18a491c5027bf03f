@@ -1,0 +1,11 @@
+package test;
+
+import org.apache.hadoop.io.WritableComparable;
+
+public class MyKey implements WritableComparable<MyKey>{
+	String productId;
+	String userId;
+	public MyKey() {
+		
+	}
+}

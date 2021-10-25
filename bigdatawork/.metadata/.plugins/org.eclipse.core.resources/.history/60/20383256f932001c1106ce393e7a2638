@@ -1,0 +1,54 @@
+package mapreduce.air.sort;
+
+import java.io.DataInput;
+import java.io.DataOutput;
+import java.io.IOException;
+
+import org.apache.hadoop.io.WritableComparable;
+
+public class CustomKey implements WritableComparable<CustomKey>{
+	private String year;
+	private Integer month;
+	public CustomKey() {
+		
+	}
+	public CustomKey(String year, Integer month) {
+		super();
+		this.year = year;
+		this.month = month;
+	}
+	public String getYear() {
+		return year;
+	}
+
+	public void setYear(String year) {
+		this.year = year;
+	}
+
+	public Integer getMonth() {
+		return month;
+	}
+
+	public void setMonth(Integer month) {
+		this.month = month;
+	}
+
+	@Override
+	public void readFields(DataInput arg0) throws IOException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void write(DataOutput arg0) throws IOException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int compareTo(CustomKey o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+		
+}

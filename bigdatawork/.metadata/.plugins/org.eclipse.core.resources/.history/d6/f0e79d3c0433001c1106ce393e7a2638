@@ -1,0 +1,5 @@
+package mapreduce.air.sort;
+
+public class AirSortPartitioner {
+
+}

@@ -1,0 +1,29 @@
+package mapreduce.air.sort;
+
+public class Test {
+
+	public static void main(String[] args) {
+		//문자열비교 - compareTo
+		/*
+		 * compareTo의 결과
+		 * ASCII코드값을 기준으로 처리
+		 *  1 : 기준문자열 > 매개변수문자열 
+		 * -1 : 기준문자열 < 매개변수문자열
+		 *  0 : 기준문자열 = 매개변수문자열 
+		 */
+		String data1 = "a";
+		String data2 = "a";
+		System.out.println((int)'a');//97
+		System.out.println((int)'b');//98
+		System.out.println(data1.compareTo(data2));
+		
+		//hashcode
+		//해시코드란 객체를 구분할 수 있는 정수 값
+		//=> 정수 값은 객체가 할당된 주소를 가지고 내부에서 생성된다.
+		//=> hashcode메소드를 이용하면 이 정수 값이 리턴된다.
+		CustomKey key1 = new CustomKey();
+		CustomKey key2 = new CustomKey();
+		System.out.println(key1);
+		System.out.println(key2);
+	}
+}

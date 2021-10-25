@@ -1,0 +1,10 @@
+package test;
+
+import org.apache.hadoop.io.WritableComparator;
+
+public class GroupKeyComparator extends WritableComparator {
+
+	protected GroupKeyComparator() {
+		super(MyKey.class, true);		
+	}	
+}

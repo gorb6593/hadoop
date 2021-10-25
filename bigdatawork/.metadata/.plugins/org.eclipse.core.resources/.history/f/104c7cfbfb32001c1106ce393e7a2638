@@ -1,0 +1,17 @@
+package mapreduce.air.sort;
+
+public class Test {
+
+	public static void main(String[] args) {
+		//문자열비교 - compareTo
+		/*
+		 * compareTo의 결과
+		 *  1 : 기준문자열 > 매개변수문자열 
+		 */
+		String data1 = "a";
+		String data2 = "b";
+		System.out.println((int)'a');//97
+		System.out.println((int)'b');//98
+		System.out.println(data1.compareTo(data2));
+	}
+}

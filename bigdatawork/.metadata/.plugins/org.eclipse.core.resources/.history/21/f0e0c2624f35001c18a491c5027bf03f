@@ -1,0 +1,30 @@
+package test;
+
+import java.io.DataInput;
+import java.io.DataOutput;
+import java.io.IOException;
+
+import org.apache.hadoop.io.WritableComparable;
+import org.apache.hadoop.io.WritableUtils;
+
+public class MyKey implements WritableComparable<MyKey>{
+	String productId;
+	String userId;
+	public MyKey() {
+		
+	}
+	@Override
+	public void readFields(DataInput in) throws IOException {
+		productId = WritableUtils.readString(in);
+		userId = WritableUtils.readString(in);
+	}
+	@Override
+	public void write(DataOutput out) throws IOException {
+		WritableUtils.writeString(out, productId);
+		WritableUtils.writeString(out, userId);
+	}
+	@Override
+	public int compareTo(MyKey o) {
+		return 0;
+	}
+}

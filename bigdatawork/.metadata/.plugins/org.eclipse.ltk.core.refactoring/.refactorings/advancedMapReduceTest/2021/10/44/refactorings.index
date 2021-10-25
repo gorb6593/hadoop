@@ -1,0 +1,27 @@
+1635122539324	Rename type 'GroupKeyComparaor'
+1635136037167	Copy package
+1635136081737	Rename type 'AirSortReducer'
+1635136095709	Rename type 'AirSortPartitioner'
+1635136112692	Rename type 'AirSortMapper'
+1635136120162	Rename type 'AirSortDriver'
+1635136210916	Delete element
+1635136226268	Delete element
+1635136229806	Delete element
+1635136243384	Copy package
+1635136339979	Rename type 'AirSortReducer'
+1635136360510	Rename type 'AirSortDriver'
+1635136383459	Rename type 'CustomKeyComparator'
+1635136396700	Rename type 'AirSortPartitioner'
+1635136409265	Rename type 'AirSortMapper'
+1635136420060	Rename type 'CustomKey'
+1635137283784	Rename package 'mapreduce.air.sort'
+1635137291049	Rename package 'mapreduce.test'
+1635137322431	Delete element
+1635140172495	Rename package 'test'
+1635140410921	Delete element
+1635140412722	Delete element
+1635140414572	Delete element
+1635140418667	Copy compilation units
+1635140449358	Rename type 'AirSortDriver'
+1635140461781	Rename type 'AirSortMapper'
+1635140475634	Rename type 'AirSortReducer'
